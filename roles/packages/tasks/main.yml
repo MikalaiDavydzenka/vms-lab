@@ -1,0 +1,16 @@
+- name: install libvirt
+  package:
+      state: present
+      name:
+        - cpu-checker
+        - qemu-kvm
+        - libvirt-clients
+        - libvirt-daemon-system
+        - bridge-utils
+
+- name: install cockpit
+  package:
+    state: present
+    name:
+      - cockpit
+      - cockpit-machines
