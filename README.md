@@ -12,3 +12,12 @@ pip install -r requirements.txt
 # install ansible collection
 ansible-galaxy collection install -r ansible-requirements.yml
 ```
+
+# Firecracker
+
+Links:
+- [Firecracker Docs](https://github.com/firecracker-microvm/firecracker/tree/master/docs)
+- Build Kernel
+    * https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
+- [Firectl](https://github.com/firecracker-microvm/firectl) - helps manage firecracker vms
+- [Docker container to build kernel and rootfs compatible with firecracker](https://github.com/bkleiner/ubuntu-firecracker)
