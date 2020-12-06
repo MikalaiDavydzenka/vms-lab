@@ -19,5 +19,22 @@ Links:
 - [Firecracker Docs](https://github.com/firecracker-microvm/firecracker/tree/master/docs)
 - Build Kernel
     * https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
+    * [Work with kernel config](https://stackoverflow.com/a/31936064)
+        + `make olddefconfig` sets every option to their default value without asking interactively
 - [Firectl](https://github.com/firecracker-microvm/firectl) - helps manage firecracker vms
 - [Docker container to build kernel and rootfs compatible with firecracker](https://github.com/bkleiner/ubuntu-firecracker)
+
+# Build Kernel
+
+```sh
+# dependencies
+sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev
+# download
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.9.12.tar.xz
+# unarchive
+tar xf linux-5.9.12.tar.xz
+# copy .config file to resulted folder
+make olddefconfig
+make vmlinux
+```
+
