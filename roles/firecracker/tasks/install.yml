@@ -1,10 +1,18 @@
-- name: download
+- name: install firecracker
   get_url:
     url: https://github.com/firecracker-microvm/firecracker/releases/download/v0.23.1/firecracker-v0.23.1-x86_64
     dest: /usr/bin/firecracker
     checksum: sha256:31d87b9169357479145f16476b4d080d1644bba45e297d945dd078dbec3af00f
     mode: '0755'
 
-- name: download linux config
+- name: install firectl
   get_url:
-    url: https://github.com/firecracker-microvm/firecracker/blob/master/resources/microvm-kernel-x86_64.config
+    url: https://firectl-release.s3.amazonaws.com/firectl-v0.1.0
+    dest: /usr/bin/firectl
+    checksum: sha256:5b62a2defdacc34424804b6ffa34c7eaadb3cc8cc9f44d1471edb8a6e4657489
+    mode: '0755'
+
+
+# - name: download linux config
+#   get_url:
+#     url: https://github.com/firecracker-microvm/firecracker/blob/master/resources/microvm-kernel-x86_64.config

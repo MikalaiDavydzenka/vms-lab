@@ -1,1 +1,3 @@
 firecracker/
+vmlinux
+*.ext4
