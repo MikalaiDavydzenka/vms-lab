@@ -38,3 +38,10 @@ make olddefconfig
 make vmlinux
 ```
 
+# Start
+
+```
+sudo setfacl -m u:${USER}:rw /dev/kvm
+firecracker --api-sock /tmp/firecracker.socket
+```
+

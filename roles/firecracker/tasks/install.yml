@@ -4,3 +4,7 @@
     dest: /usr/bin/firecracker
     checksum: sha256:31d87b9169357479145f16476b4d080d1644bba45e297d945dd078dbec3af00f
     mode: '0755'
+
+- name: download linux config
+  get_url:
+    url: https://github.com/firecracker-microvm/firecracker/blob/master/resources/microvm-kernel-x86_64.config
