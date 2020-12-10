@@ -45,3 +45,10 @@ sudo setfacl -m u:${USER}:rw /dev/kvm
 firecracker --api-sock /tmp/firecracker.socket
 ```
 
+# K3S
+
+[binary link](https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/k3s)
+```sh
+#install
+sudo INSTALL_K3S_SKIP_DOWNLOAD=true ./k3s_install.sh
+```
