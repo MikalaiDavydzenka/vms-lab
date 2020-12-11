@@ -6,7 +6,7 @@ cd /opt/linux-${KERNEL_VERSION}
 make -j32
 # not sure if we need to build vmlinux explicitly
 # make -j32 vmlinux
-
+make modules_install
 
 cp vmlinux /opt/out/vmlinux
 
