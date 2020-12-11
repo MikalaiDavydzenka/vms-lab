@@ -2,5 +2,7 @@ firecracker/
 vmlinux
 *.ext4
 *.tar.gz
+*.tar.xz
 *.tgz
 k3s
+*.bak
