@@ -12,4 +12,6 @@ docker run -it --rm \
     --volume ${TMP_MOUNT}:/custom-rootfs \
     alpine /scripts/make-rootfs.sh
 
+sudo cp -r ../kernel/opt/out/lib/modules/ ${TMP_MOUNT}/lib/
+
 sudo umount ${TMP_MOUNT}
