@@ -3,8 +3,15 @@ set -ex
 
 # dpkg -i /mnt/root/linux*.deb
 
-echo 'ubuntu-bionic' > /etc/hostname
+echo "sandbox" > /etc/hostname
 passwd -d root
+adduser \
+    --disabled-password \
+    --shell /bin/bash \
+    --ingroup sudo \
+    --gecos "" \
+    sandman
+echo "sandman:sandman" | chpasswd
 mkdir /etc/systemd/system/serial-getty@ttyS0.service.d/
 cat <<EOF > /etc/systemd/system/serial-getty@ttyS0.service.d/autologin.conf
 [Service]
@@ -20,6 +27,7 @@ network:
     eth0:
       addresses:
       - 172.16.0.2/24
+      gateway4: 172.16.0.1
       nameservers:
         addresses:
           - 8.8.8.8

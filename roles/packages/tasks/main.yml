@@ -12,5 +12,5 @@
   package:
     state: present
     name:
-      - cockpit
       - cockpit-machines
+      - cockpit

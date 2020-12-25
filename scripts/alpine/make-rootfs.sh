@@ -16,6 +16,7 @@ rc-update add agetty.ttyS0 default
 rc-update add devfs boot
 rc-update add procfs boot
 rc-update add sysfs boot
+rc-update add cgroups
 
 rc-update add networking default
 
@@ -28,7 +29,9 @@ adduser \
 echo "sandman:sandman" | chpasswd
 
 echo "sandbox" > /etc/hostname
-echo "127.0.1.1 sandbox" >> /etc/hosts
+echo "127.0.0.1 sandbox" >> /etc/hosts
+
+echo 'keep_network="NO"' >> /etc/rc.conf
 
 
 # Then, copy the newly configured system to the rootfs image:
